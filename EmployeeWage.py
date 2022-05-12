@@ -34,9 +34,9 @@ while(empTotalHour<=100 and empTotalWorkDays<20):
     empWorkHour = GetWorkHours(check) # Calling function to get work hours
     empDailyWage = empWorkHour * wagePerHour; # Calculating employee daily wage based on work hours
     totalMonthWage += empDailyWage # Adding daily wage to total wages
-    empTotalWorkDays += 1
     empTotalHour += empWorkHour
-    print(f"Employee daily wage is : {empDailyWage}") 
+    print(f"Employee daily wage for day {empTotalWorkDays+1} is : {empDailyWage}") # Storing daily wage with day  
+    empTotalWorkDays += 1
     
 if (empTotalHour > 100): # Checking that hours are more than 100 or not
     a = empTotalHour - 100
