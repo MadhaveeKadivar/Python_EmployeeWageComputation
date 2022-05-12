@@ -36,13 +36,14 @@ while(empTotalHour<=100 and empTotalWorkDays<20):
     totalMonthWage += empDailyWage # Adding daily wage to total wages
     empTotalWorkDays += 1
     empTotalHour += empWorkHour
-        
+    print(f"Employee daily wage is : {empDailyWage}") 
+    
 if (empTotalHour > 100): # Checking that hours are more than 100 or not
     a = empTotalHour - 100
     empTotalHour -= a
     wage = a * wagePerHour # Calculate extra hours wage
     totalMonthWage -= wage; # Minus extra hours wage from emp total wage
     
-print(f"Employee total working days  : {empTotalWorkDays}")
+print(f"\n\nEmployee total working days  : {empTotalWorkDays}")
 print(f"Employee total working hours  : {empTotalHour}")
 print(f"Employee Total Month Wage : {totalMonthWage}")
