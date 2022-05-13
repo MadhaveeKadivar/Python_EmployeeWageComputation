@@ -20,7 +20,7 @@ def PresentForFullTime():
         Parameter:
             None
         Return:
-            Nothing
+            Employee Work Hours
     """
     empWorkHour = 8
     return empWorkHour
@@ -31,7 +31,7 @@ def PresentForPartTime():
         Parameter:
             None
         Return:
-            Nothing
+            Employee Work Hours
     """
     empWorkHour = 4
     return empWorkHour
@@ -42,7 +42,7 @@ def Absent():
         Parameter:
             None
         Return:
-            Nothing
+            Employee Work Hours
     """
     empWorkHour = 0
     return empWorkHour
@@ -62,11 +62,12 @@ def SwitchCase(check):
     }
     return switch.get(check,"")
 while(empTotalHour<=100 and empTotalWorkDays<20):
-    check = random.randint(0,2)
+    check = random.randint(0,2) 
     result = SwitchCase(check) # Calling function for cases
+    if(result == 8 or result == 4):
+        empTotalWorkDays += 1
     empDailyWage = result * wagePerHour; # Calculating employee daily wage based on work hours
     totalMonthWage += empDailyWage # Adding daily wage to total wages
-    empTotalWorkDays += 1
     empTotalHour += result
     
 if (empTotalHour > 100): # Checking that hours are more than 100 or not
