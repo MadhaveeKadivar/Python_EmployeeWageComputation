@@ -11,6 +11,7 @@ import random
 # Declaring variables
 wagePerHour = 20
 empWorkHour = empDailyWage = totalMonthWage = empTotalHour = empTotalWorkDays = 0
+list = []
 # Checking that employee is present for full time , part time or absent
 def GetWorkHours(check):
     """ 
@@ -32,11 +33,13 @@ def GetWorkHours(check):
 while(empTotalHour<=100 and empTotalWorkDays<20):
     check = random.randint(0,2)
     empWorkHour = GetWorkHours(check) # Calling function to get work hours
+    if(empWorkHour == 8 or empWorkHour == 4):
+        empTotalWorkDays += 1       
     empDailyWage = empWorkHour * wagePerHour; # Calculating employee daily wage based on work hours
+    list.append(empDailyWage) # Storing daily wage in list
     totalMonthWage += empDailyWage # Adding daily wage to total wages
-    empTotalWorkDays += 1
     empTotalHour += empWorkHour
-    print(f"Employee daily wage is : {empDailyWage}") 
+    
     
 if (empTotalHour > 100): # Checking that hours are more than 100 or not
     a = empTotalHour - 100
@@ -44,6 +47,7 @@ if (empTotalHour > 100): # Checking that hours are more than 100 or not
     wage = a * wagePerHour # Calculate extra hours wage
     totalMonthWage -= wage; # Minus extra hours wage from emp total wage
     
+print(f"\n\nList of employee daily wage for whole month is : \n{list}")   
 print(f"\n\nEmployee total working days  : {empTotalWorkDays}")
 print(f"Employee total working hours  : {empTotalHour}")
 print(f"Employee Total Month Wage : {totalMonthWage}")
