@@ -53,3 +53,4 @@ for i in sorted (dict) : # sorting dictionary by key
 print(f"\n\nEmployee total working days  : {empTotalWorkDays}")
 print(f"Employee total working hours  : {empTotalHour}")
 print(f"Employee Total Month Wage : {totalMonthWage}\n\n")
+
