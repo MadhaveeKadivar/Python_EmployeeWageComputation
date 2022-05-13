@@ -23,7 +23,7 @@ def PresentForFullTime():
         Parameter:
             None
         Return:
-            Nothing
+            Employee Work hours
     """
     empWorkHour = 8
     return empWorkHour
@@ -34,7 +34,7 @@ def PresentForPartTime():
         Parameter:
             None
         Return:
-            Nothing
+            Employee Work hours
     """
     empWorkHour = 4
     return empWorkHour
@@ -45,7 +45,7 @@ def Absent():
         Parameter:
             None
         Return:
-            Nothing
+            Employee Work hours
     """
     empWorkHour = 0
     return empWorkHour
