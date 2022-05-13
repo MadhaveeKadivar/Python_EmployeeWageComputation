@@ -3,7 +3,7 @@
     @Author: Madhavee Kadivar
     @Date: 2022-05-12 12:55:01
     @Last Modified by: Madhavee Kadivar
-    @Last Modified time: 2022-05-12 4:40:26
+    @Last Modified time: 2022-05-13 1:01:19
     @Title : Employee Wage Computation
 '''
 # Importing random modules
@@ -11,6 +11,8 @@ import random
 # Declaring variables
 wagePerHour = 20
 empWorkHour = empDailyWage = totalMonthWage = empTotalHour = empTotalWorkDays = 0
+dict = {}
+day = 1
 # Checking that employee is present for full time , part time or absent
 def GetWorkHours(check):
     """ 
@@ -32,18 +34,22 @@ def GetWorkHours(check):
 while(empTotalHour<=100 and empTotalWorkDays<20):
     check = random.randint(0,2)
     empWorkHour = GetWorkHours(check) # Calling function to get work hours
+    if(empWorkHour == 8 or empWorkHour == 4):
+        empTotalWorkDays += 1
     empDailyWage = empWorkHour * wagePerHour; # Calculating employee daily wage based on work hours
     totalMonthWage += empDailyWage # Adding daily wage to total wages
     empTotalHour += empWorkHour
-    print(f"Employee daily wage for day {empTotalWorkDays+1} is : {empDailyWage}") # Storing daily wage with day  
-    empTotalWorkDays += 1
-    
+    dict[day] = empDailyWage 
+    day +=1  
 if (empTotalHour > 100): # Checking that hours are more than 100 or not
     a = empTotalHour - 100
     empTotalHour -= a
     wage = a * wagePerHour # Calculate extra hours wage
     totalMonthWage -= wage; # Minus extra hours wage from emp total wage
-    
+
+print(" Day  : DailyWage")
+for i in sorted (dict) : # sorting dictionary by key
+    print (f"Day {i} : {dict[i]}") 
 print(f"\n\nEmployee total working days  : {empTotalWorkDays}")
 print(f"Employee total working hours  : {empTotalHour}")
-print(f"Employee Total Month Wage : {totalMonthWage}")
+print(f"Employee Total Month Wage : {totalMonthWage}\n\n")
