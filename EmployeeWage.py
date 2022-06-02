@@ -15,14 +15,17 @@ empDailyWage = 0
 # Checking that employee is present for full time , part time or absent
 check = random.randint(0,2)
 if(check == 1):
-    print("Employee is Present for Full time")
-    empWorkHour = 8
-elif(check == 2):
-    print("Employee is Present for Part time")
-    empWorkHour = 4
+    result = random.randint(0,1)
+    if(result == 0):
+        print("Employee is Present for Part time")
+        empWorkHour = 4
+    else:
+        print("Employee is Present for Full time")
+        empWorkHour = 8
 else:
     print("Employee is Absent")
     empWorkHour = 0
+    
 # Calculating employee daily wage based on work hours
 empDailyWage = empWorkHour*wagePerHour
 print(f"Employee Daily wage is : {empDailyWage}")
