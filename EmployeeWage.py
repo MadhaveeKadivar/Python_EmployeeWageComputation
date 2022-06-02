@@ -16,7 +16,7 @@ empWorkHour = 0
 empDailyWage = 0
 
 # Checking that employee is present for full time , part time or absent
-def PresentForFullTime():
+def present_for_fullTime():
     """ 
         Description: 
             This function is set employee work hours as 8 for full time presence of employee
@@ -27,7 +27,7 @@ def PresentForFullTime():
     """
     empWorkHour = 8
     return empWorkHour
-def PresentForPartTime():
+def present_for_partTime():
     """ 
         Description: 
             This function is set employee work hours as 4 for part time presence of employee
@@ -38,7 +38,7 @@ def PresentForPartTime():
     """
     empWorkHour = 4
     return empWorkHour
-def Absent():
+def absent():
     """ 
         Description: 
             This function is set employee work hours as 0 for absence of employee
@@ -49,7 +49,8 @@ def Absent():
     """
     empWorkHour = 0
     return empWorkHour
-def SwitchCase(check):
+
+def switch_case(check):
     """ 
         Description: 
             This function is used for imlementing switch case for employee attendence
@@ -59,13 +60,16 @@ def SwitchCase(check):
             It returns function value based on choice
     """
     switch={
-       1 : PresentForFullTime(),
-       2 : PresentForPartTime(),
-       0 : Absent(),
+       1 : present_for_fullTime(),
+       0 : present_for_partTime(),
     }
     return switch.get(check,"")
-check = random.randint(0,2)
-result = SwitchCase(check) # Calling function for cases
+check = random.randint(0,1)
+if not check :
+    result = absent()
+else:
+    check = random.randint(0,1)
+    result = switch_case(check) # Calling function for cases
 
 # Calculating employee daily wage based on work hours
 empDailyWage = result*wagePerHour
