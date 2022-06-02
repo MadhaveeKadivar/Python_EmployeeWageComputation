@@ -1,4 +1,3 @@
-
 '''
     @Author: Madhavee Kadivar
     @Date: 2022-05-12 12:55:01
@@ -14,7 +13,7 @@ empWorkHour = empDailyWage = totalMonthWage = empTotalHour = empTotalWorkDays = 
 dict = {}
 day = 1
 # Checking that employee is present for full time , part time or absent
-def GetWorkHours(check):
+def get_work_hours(check):
     """ 
         Description: 
             This function is calculating workhours based on employee attendence
@@ -24,16 +23,21 @@ def GetWorkHours(check):
             returns employee work hours for one day 
     """
     if(check == 1):
-        empWorkHour = 8 # Employee is present for full time
-    elif(check == 2):
-        empWorkHour = 4  # Employee is present for part time
+        result = random.randint(0,1)
+        if(result == 0):
+            print("Employee is Present for Part time")
+            empWorkHour = 4
+        else:
+            print("Employee is Present for Full time")
+            empWorkHour = 8
     else:
-        empWorkHour = 0  # Employee is absent
+        print("Employee is Absent")
+        empWorkHour = 0
     return empWorkHour
 
 while(empTotalHour<=100 and empTotalWorkDays<20):
-    check = random.randint(0,2)
-    empWorkHour = GetWorkHours(check) # Calling function to get work hours
+    check = random.randint(0,1)
+    empWorkHour = get_work_hours(check) # Calling function to get work hours
     if(empWorkHour == 8 or empWorkHour == 4):
         empTotalWorkDays += 1
     empDailyWage = empWorkHour * wagePerHour; # Calculating employee daily wage based on work hours
@@ -53,4 +57,3 @@ for i in sorted (dict) : # sorting dictionary by key
 print(f"\n\nEmployee total working days  : {empTotalWorkDays}")
 print(f"Employee total working hours  : {empTotalHour}")
 print(f"Employee Total Month Wage : {totalMonthWage}\n\n")
-
