@@ -7,7 +7,7 @@
     @Title : Employee Wage Computation
 '''
 # Importing random modules
-from email.policy import default
+
 import random
 
 # Declaring variables
