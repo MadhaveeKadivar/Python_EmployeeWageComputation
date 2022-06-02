@@ -35,7 +35,7 @@ def get_work_hours(check):
     return empWorkHour
 
 while(empTotalHour<=100 and empTotalWorkDays<20):
-    check = random.randint(0,2)
+    check = random.randint(0,1)
     empWorkHour = get_work_hours(check) # Calling function to get work hours
     if(empWorkHour == 8 or empWorkHour == 4):
         empTotalWorkDays += 1
