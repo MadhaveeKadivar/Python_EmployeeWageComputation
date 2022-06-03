@@ -1,0 +1,57 @@
+2022-06-03 16:15:31,090 | DEBUG | 38: Employee is Present for Part time
+2022-06-03 16:15:31,090 | DEBUG | 38: Employee is Present for Part time
+2022-06-03 16:15:31,097 | DEBUG | 41: Employee is Present for Full time
+2022-06-03 16:15:31,097 | DEBUG | 38: Employee is Present for Part time
+2022-06-03 16:15:31,098 | DEBUG | 44: Employee is Absent
+2022-06-03 16:15:31,099 | DEBUG | 41: Employee is Present for Full time
+2022-06-03 16:15:31,099 | DEBUG | 44: Employee is Absent
+2022-06-03 16:15:31,100 | DEBUG | 38: Employee is Present for Part time
+2022-06-03 16:15:31,101 | DEBUG | 44: Employee is Absent
+2022-06-03 16:15:31,102 | DEBUG | 44: Employee is Absent
+2022-06-03 16:15:31,102 | DEBUG | 38: Employee is Present for Part time
+2022-06-03 16:15:31,103 | DEBUG | 41: Employee is Present for Full time
+2022-06-03 16:15:31,104 | DEBUG | 41: Employee is Present for Full time
+2022-06-03 16:15:31,104 | DEBUG | 38: Employee is Present for Part time
+2022-06-03 16:15:31,105 | DEBUG | 44: Employee is Absent
+2022-06-03 16:15:31,106 | DEBUG | 41: Employee is Present for Full time
+2022-06-03 16:15:31,111 | DEBUG | 44: Employee is Absent
+2022-06-03 16:15:31,113 | DEBUG | 41: Employee is Present for Full time
+2022-06-03 16:15:31,114 | DEBUG | 41: Employee is Present for Full time
+2022-06-03 16:15:31,115 | DEBUG | 41: Employee is Present for Full time
+2022-06-03 16:15:31,115 | DEBUG | 44: Employee is Absent
+2022-06-03 16:15:31,116 | DEBUG | 44: Employee is Absent
+2022-06-03 16:15:31,116 | DEBUG | 44: Employee is Absent
+2022-06-03 16:15:31,117 | DEBUG | 44: Employee is Absent
+2022-06-03 16:15:31,118 | DEBUG | 41: Employee is Present for Full time
+2022-06-03 16:15:31,118 | DEBUG | 41: Employee is Present for Full time
+2022-06-03 16:15:31,119 | INFO | 66: Day 1 : 80
+2022-06-03 16:15:31,121 | INFO | 66: Day 2 : 80
+2022-06-03 16:15:31,123 | INFO | 66: Day 3 : 160
+2022-06-03 16:15:31,125 | INFO | 66: Day 4 : 80
+2022-06-03 16:15:31,126 | INFO | 66: Day 5 : 0
+2022-06-03 16:15:31,127 | INFO | 66: Day 6 : 160
+2022-06-03 16:15:31,128 | INFO | 66: Day 7 : 0
+2022-06-03 16:15:31,129 | INFO | 66: Day 8 : 80
+2022-06-03 16:15:31,130 | INFO | 66: Day 9 : 0
+2022-06-03 16:15:31,130 | INFO | 66: Day 10 : 0
+2022-06-03 16:15:31,131 | INFO | 66: Day 11 : 80
+2022-06-03 16:15:31,132 | INFO | 66: Day 12 : 160
+2022-06-03 16:15:31,133 | INFO | 66: Day 13 : 160
+2022-06-03 16:15:31,134 | INFO | 66: Day 14 : 80
+2022-06-03 16:15:31,135 | INFO | 66: Day 15 : 0
+2022-06-03 16:15:31,137 | INFO | 66: Day 16 : 160
+2022-06-03 16:15:31,138 | INFO | 66: Day 17 : 0
+2022-06-03 16:15:31,138 | INFO | 66: Day 18 : 160
+2022-06-03 16:15:31,141 | INFO | 66: Day 19 : 160
+2022-06-03 16:15:31,141 | INFO | 66: Day 20 : 160
+2022-06-03 16:15:31,146 | INFO | 66: Day 21 : 0
+2022-06-03 16:15:31,148 | INFO | 66: Day 22 : 0
+2022-06-03 16:15:31,149 | INFO | 66: Day 23 : 0
+2022-06-03 16:15:31,150 | INFO | 66: Day 24 : 0
+2022-06-03 16:15:31,151 | INFO | 66: Day 25 : 160
+2022-06-03 16:15:31,152 | INFO | 66: Day 26 : 160
+2022-06-03 16:15:31,153 | INFO | 67: Employee total working days  : 16
+2022-06-03 16:15:31,154 | INFO | 68: Employee total working hours  : 100
+2022-06-03 16:15:31,155 | INFO | 69: Employee Total Month Wage : 2000
+
+

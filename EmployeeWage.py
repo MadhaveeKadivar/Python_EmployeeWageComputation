@@ -7,7 +7,18 @@
 '''
 # Importing random modules
 import random
-# Declaring variables
+import logging
+
+# Logging
+logging.basicConfig(filename = 'file.log',format = '%(asctime)s | %(levelname)s | %(lineno)d: %(message)s')
+logger = logging.getLogger("root_logger")
+logger.setLevel(logging.DEBUG)
+console_handler = logging.StreamHandler()
+log_format = '%(message)s'
+console_handler.setFormatter(logging.Formatter(log_format))
+logger.addHandler(console_handler)
+
+#Declaring variables
 wagePerHour = 20
 empWorkHour = empDailyWage = totalMonthWage = empTotalHour = empTotalWorkDays = 0
 dict = {}
@@ -25,13 +36,13 @@ def get_work_hours(check):
     if(check == 1):
         result = random.randint(0,1)
         if(result == 0):
-            print("Employee is Present for Part time")
+            logger.debug("Employee is Present for Part time")
             empWorkHour = 4
         else:
-            print("Employee is Present for Full time")
+            logger.debug("Employee is Present for Full time")
             empWorkHour = 8
     else:
-        print("Employee is Absent")
+        logger.debug("Employee is Absent")
         empWorkHour = 0
     return empWorkHour
 
@@ -53,7 +64,7 @@ if (empTotalHour > 100): # Checking that hours are more than 100 or not
 
 print(" Day  : DailyWage")
 for i in sorted (dict) : # sorting dictionary by key
-    print (f"Day {i} : {dict[i]}") 
-print(f"\n\nEmployee total working days  : {empTotalWorkDays}")
-print(f"Employee total working hours  : {empTotalHour}")
-print(f"Employee Total Month Wage : {totalMonthWage}\n\n")
+    logger.info(f"Day {i} : {dict[i]}")
+logger.info(f"Employee total working days  : {empTotalWorkDays}")
+logger.info(f"Employee total working hours  : {empTotalHour}")
+logger.info(f"Employee Total Month Wage : {totalMonthWage}\n\n")
